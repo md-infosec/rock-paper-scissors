@@ -62,3 +62,12 @@ function playRound(humanChoice, computerChoice) {
         return("Draw! Try again.")
     }
 }
+
+function playGame () {
+
+    for (let i = 1; i <= 5; i++) {
+        playRound();
+    }
+
+    return "Final Score: Human: " + humanScore + ", Computer: " + computerScore;
+}
