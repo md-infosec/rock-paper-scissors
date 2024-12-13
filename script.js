@@ -19,6 +19,46 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("rock, paper, or scissors?");
-    return humanChoice;
+    let humanAnswer = prompt("rock, paper, or scissors?");
+    return humanAnswer;
+}
+
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice().toLowerCase();
+    computerChoice = getComputerChoice();
+
+    if (humanChoice == "rock" && computerChoice == "paper") {
+        computerScore++;
+        return("You lose! Paper beats rock.");
+    }
+
+    else if (humanChoice == "paper" && computerChoice == "rock") {
+        humanScore++;
+        return("You win! Paper beats rock.")
+    }
+
+    else if (humanChoice == "scissors" && computerChoice == "rock") {
+        computerScore++;
+        return("You lose! Rock beats scissors.");
+    }
+
+    else if (humanChoice == "rock" && computerChoice == "scissors") {
+        humanScore++;
+        return("You win! Rock beats scissors.");
+    }
+
+    else if (humanChoice == "paper" && computerChoice == "scissors") {
+        computerScore++;
+        return("You lose! Scissors beat paper.");
+    }
+
+    else if (humanChoice == "scissors" && computerChoice == "paper") {
+        humanScore++;
+        return("You win! Scissors beat paper.");
+    }
+
+    else {
+        return("Draw! Try again.")
+    }
 }
