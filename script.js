@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 function getComputerChoice() {
     let randomNum = Math.random(1, 3);
     let scaledNum = Math.floor(randomNum * 3) + 1;
